@@ -1,22 +1,20 @@
 package com.rest.webservices.restfulwebservices.user;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-
+import io.swagger.v3.oas.annotations.media.Schema;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
-@ApiModel(description = "Details about User.")
+@Schema(description = "Details about User.")
 public class User {
 
     private Integer id;
 
-    @ApiModelProperty(notes = "Name should consist of at least 2 characters.")
+    @Schema(description = "Name should consist of at least 2 characters.")
     @Size(min = 2, message = "Name should have at least 2 characters.")
     private String name;
 
-    @ApiModelProperty(notes = "Birth date should be less than current date.")
+    @Schema(description = "Birth date should be less than current date.")
     @Past
     private Date birthDate;
 
