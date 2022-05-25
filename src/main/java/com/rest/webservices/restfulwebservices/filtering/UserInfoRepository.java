@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-public class UserRepository {
+public class UserInfoRepository {
 
     private MappingJacksonValue addMapping(Object userInfo, String filterList){
         MappingJacksonValue mapping = new MappingJacksonValue(userInfo);
